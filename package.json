@@ -10,9 +10,6 @@
     
     "start": "npm run serve"
   },
-  "dependencies": {
-    "vite": "^2.0.0"
-  },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
     "daisyui": "^4.7.2",
