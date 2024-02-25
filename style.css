@@ -8,13 +8,14 @@ body {
     max-width: fit-content;
     overflow-x: hidden;
 }
-
-@media screen and (max-width: 980px) {
+.skills,.skill-2{
+    overflow-x: hidden;
+}
+@media screen and (max-width: 480px) {
     body {
         margin: 0;
         width: 100%;
-        max-width: 100vw;
-        overflow-x: hidden;
+        overflow: hidden;
         font-family: Poppins;
     }
     .list {
@@ -23,11 +24,77 @@ body {
     #contact-2 {
         display: none;
     }
+    #tcs-2{
+        display: none;
+    }
+}
+
+.navbar li:hover{
+    border-radius: 20px;
+    color: red;
+}
+#tcs-2{
+    position: absolute;
+}
+#tcs-1{
+    z-index: 10;
+    animation: scrol 1s forwards;
+    animation-timeline:view(500px 300px) ;
+}
+#tcs-2{
+    z-index: 1;
+    animation: scrol-1 1s forwards;
+    animation-timeline:view(250px 200px) ;
+}
+ion-icon{
+    color: purple;
+    size: large;
+}
+#tcs-1-s{
+    transform: translateX(200px);
+}
+
+#tcs-2-s{
+    animation: scoll 2s forwards;
+    transition: all 2s;
+    animation-timeline: view(200px 200px);
+}
+
+@keyframes scrol {
+    from{
+        z-index: 1;
+        filter: blur(0px);
+        opacity: 1;
+    }
+    to{
+        z-index: 0;
+        opacity: 0;
+        filter: blur(1px);
+    }    
 }
 
 
+@keyframes scrol-1 {
+    from{
+        z-index: 0;
+        opacity: 0;
+        filter: blur(1px);
+    }
+    to{
+        z-index: 1;
+        opacity: 1;
+        filter: blur(0px);
+    }    
+}
 
-
+@keyframes scoll {
+    to{
+        transform: translateX(20px);
+    }    
+}
+#tcs:hover{
+    animation-duration: 10s;
+}
 .About img{
     width: 300px;
     height: 200px;
